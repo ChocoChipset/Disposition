@@ -19,6 +19,8 @@
 		3AAAA2B517F35B7400303070 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAAA29D17F35B7400303070 /* UIKit.framework */; };
 		3AAAA2BD17F35B7400303070 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AAAA2BB17F35B7400303070 /* InfoPlist.strings */; };
 		3AAAA2BF17F35B7400303070 /* DispositionUnitTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAAA2BE17F35B7400303070 /* DispositionUnitTestsTests.m */; };
+		3AAAA2CB17F35D4900303070 /* CGRect+Disposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAAA2CA17F35D4900303070 /* CGRect+Disposition.m */; };
+		3AAAA2CC17F35D4900303070 /* CGRect+Disposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAAA2CA17F35D4900303070 /* CGRect+Disposition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		3AAAA2BA17F35B7400303070 /* DispositionUnitTestsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DispositionUnitTestsTests-Info.plist"; sourceTree = "<group>"; };
 		3AAAA2BC17F35B7400303070 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AAAA2BE17F35B7400303070 /* DispositionUnitTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispositionUnitTestsTests.m; sourceTree = "<group>"; };
+		3AAAA2C917F35C5300303070 /* CGRect+Disposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CGRect+Disposition.h"; path = "../../Source/CGRect+Disposition.h"; sourceTree = "<group>"; };
+		3AAAA2CA17F35D4900303070 /* CGRect+Disposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CGRect+Disposition.m"; path = "../../Source/CGRect+Disposition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		3AAAA29F17F35B7400303070 /* DispositionUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				3AAAA2C817F35C0400303070 /* Source */,
 				3AAAA2A817F35B7400303070 /* HZAppDelegate.h */,
 				3AAAA2A917F35B7400303070 /* HZAppDelegate.m */,
 				3AAAA2AB17F35B7400303070 /* Images.xcassets */,
@@ -142,6 +147,15 @@
 				3AAAA2BB17F35B7400303070 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AAAA2C817F35C0400303070 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3AAAA2C917F35C5300303070 /* CGRect+Disposition.h */,
+				3AAAA2CA17F35D4900303070 /* CGRect+Disposition.m */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAAA2CB17F35D4900303070 /* CGRect+Disposition.m in Sources */,
 				3AAAA2AA17F35B7400303070 /* HZAppDelegate.m in Sources */,
 				3AAAA2A617F35B7400303070 /* main.m in Sources */,
 			);
@@ -250,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AAAA2BF17F35B7400303070 /* DispositionUnitTestsTests.m in Sources */,
+				3AAAA2CC17F35D4900303070 /* CGRect+Disposition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +458,7 @@
 				3AAAA2C417F35B7400303070 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AAAA2C517F35B7400303070 /* Build configuration list for PBXNativeTarget "DispositionUnitTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +467,7 @@
 				3AAAA2C717F35B7400303070 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
