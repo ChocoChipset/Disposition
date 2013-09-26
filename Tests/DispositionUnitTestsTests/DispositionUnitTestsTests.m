@@ -7,8 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CGRect+Disposition.h"
+
+const CGRect kOriginalRect = { 0.0, 10.0, 100.0, 300.0 };
 
 @interface DispositionUnitTestsTests : XCTestCase
+
+
 
 @end
 
@@ -26,9 +31,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testWidth
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    CGFloat targetWidth = 600;
+    CGRect newRect = kOriginalRect;
+    CGRectSetWidth(&newRect, targetWidth);
+    
+    
+    XCTAssertEqual(newRect.size.width, targetWidth, @"size.width failed to be set");
+    
 }
 
 @end
