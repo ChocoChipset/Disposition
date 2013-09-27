@@ -31,15 +31,64 @@ const CGRect kOriginalRect = { 0.0, 10.0, 100.0, 300.0 };
     [super tearDown];
 }
 
-- (void)testWidth
+- (void)testSetWidth
 {
     CGFloat targetWidth = 600;
     CGRect newRect = kOriginalRect;
     CGRectSetWidth(&newRect, targetWidth);
     
-    
     XCTAssertEqual(newRect.size.width, targetWidth, @"size.width failed to be set");
+}
+
+- (void)testSetHeight
+{
+    CGFloat targetHeight = 230;
+    CGRect newRect = kOriginalRect;
+    CGRectSetHeight(&newRect, targetHeight);
+    
+    XCTAssertEqual(newRect.size.height, targetHeight, @"size.height failed to be set");
+}
+
+- (void)testSetSize
+{
+    CGSize newSize = { 640, 380 };
+    CGRect newRect = kOriginalRect;
+    CGRectSetSize(&newRect, newSize);
+    BOOL isNewSizeEqualToRectSize = CGSizeEqualToSize(newRect.size, newSize);
+    
+    XCTAssertTrue(isNewSizeEqualToRectSize, @"size failed to be set");
+}
+
+
+- (void)testSetOrigin
+{
+    CGPoint newOrigin = { 99, 1024 };
+    CGRect newRect = kOriginalRect;
+    CGRectSetOrigin(&newRect, newOrigin);
+    BOOL isNewPointEqualToRectOrigin = CGPointEqualToPoint(newRect.origin, newOrigin);
+    
+    XCTAssertTrue(isNewPointEqualToRectOrigin, @"origin failed to be set");
     
 }
+
+- (void)testSetX
+{
+    CGFloat targetOriginX = -56;
+    CGRect newRect = kOriginalRect;
+    CGRectSetX(&newRect, targetOriginX);
+    
+    XCTAssertEqual(newRect.origin.x, targetOriginX, @"origin.x failed to be set");
+}
+
+- (void)testSetY
+{
+    CGFloat targetOriginY = 9999;
+    CGRect newRect = kOriginalRect;
+    CGRectSetY(&newRect, targetOriginY);
+    
+    XCTAssertEqual(newRect.origin.y, targetOriginY, @"origin.y failed to be set");
+}
+
+
 
 @end
